@@ -25,10 +25,10 @@ export default {
     }
 
     #main-burger h1 {
-        color: #fff;
+        color: var(--bg-branco);
         text-align: center;
         font-size: 60px;
-        background-color: #222;
+        background-color: var(--bg-cinza-principal);
         padding: 20px 40px;
     }
 </style>

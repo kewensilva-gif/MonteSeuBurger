@@ -18,7 +18,7 @@
           <label for="pao">Escolha o pão:</label>
           <select name="pao" id="pao" v-model="pao">
             <option value="" selected>Selecione o seu pão</option>
-            <option value="integral">Integral</option>
+            <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">{{pao.tipo}}</option>
           </select>
         </div>
 
@@ -26,15 +26,15 @@
           <label for="carne">Escolha a carne:</label>
           <select name="carne" id="carne" v-model="carne">
             <option value="" selected>Selecione o tipo de carne</option>
-            <option value="integral">Maminha</option>
+            <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">{{carne.tipo}}</option>
           </select>
         </div>
 
         <div id="opcionais-container" class="input-container">
           <label id="opcionais-title" for="opcionais">Escolha a opcionais:</label>
-          <div class="checkbox-container">
-            <input type="checkbox" name="opcionais" v-model="opcionais" value="salame">
-            <span>Salame</span>
+          <div class="checkbox-container" v-for="opcional in opcionaisdata" :key="opcional.id">
+            <input type="checkbox" name="opcionais" v-model="opcionais" :value="opcional.tipo">
+            <span>{{opcional.tipo}}</span>
           </div>
         </div>
 
@@ -52,9 +52,30 @@ export default {
   name: "BurgerForm",
   data() {
     return {
-      nome: "",
+      paes: null,
+      carnes: null,
+      opcionaisdata: null,
+      nome: null,
+      pao: null,
+      carne: null,
+      opcionais: [],
+      status: 'Solicitado',
+      msg: null
     };
   },
+  methods: {
+    async getIngredientes(){
+      const req = await fetch('http://localhost:3000/ingredientes');
+      const data = await req.json();
+
+      this.paes = data.paes;
+      this.carnes = data.carnes;
+      this.opcionaisdata = data.opcionais;
+    }
+  },
+  mounted() {
+    this.getIngredientes()
+  }
 };
 </script>
 
@@ -73,9 +94,9 @@ export default {
     label {
         font-weight: bold;
         margin-bottom: 15px;
-        color: #222;
+        color: var(--bg-cinza-principal);
         padding: 5px 10px;
-        border-left: 4px solid #FCBA03;
+        border-left: 4px solid var(--bg-amarelo-principal);
     }
 
     input, select {
@@ -110,10 +131,10 @@ export default {
     }
 
     .submit-btn {
-        background-color: #222;
-        color: #FCBA03;
+        background-color: var(--bg-cinza-principal);
+        color: var(--bg-amarelo-principal);
         font-weight: bold;
-        border: 2px solid #222;
+        border: 2px solid var(--bg-cinza-principal);
         padding: 10px;
         font-size: 16px;
         position: relative;
@@ -124,6 +145,6 @@ export default {
 
     .submit-btn:hover {
         background-color: transparent;
-        color: #222;
+        color: var(--bg-cinza-principal);
     }
 </style>

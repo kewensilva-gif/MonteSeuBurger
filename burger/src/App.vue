@@ -25,11 +25,16 @@ export default {
 </script>
 
 <style>
+
 * {
   font-family: Helvetica;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  --bg-cinza-principal: #222;
+  --bg-amarelo-principal: #FCBA03;
+  --bg-cinza-secundario: #111;
+  --bg-branco: #fff;
 }
 #app {
   width: 100%;
@@ -44,7 +49,7 @@ h1 {
   text-align: center;
   font-size: 42px;
   margin-bottom: 30px;
-  color: #222;
+  color: var(--bg-cinza-principal);
 }
 
 </style>

@@ -19,8 +19,8 @@ export default defineComponent({
 
 <style scoped> 
 nav {
-    background: #222;
-    border-bottom: 4px solid #111;
+    background: var(--bg-cinza-principal);
+    border-bottom: 4px solid var(--bg-cinza-secundario);
     padding: 15px 50px;
     display: flex;
     justify-content: flex-end;
@@ -38,13 +38,13 @@ nav #logo {
 }
 
 nav a {
-    color: #FCBA03;
+    color: var(--bg-amarelo-principal);
     text-decoration: none;
     margin: 12px;
     transition: .5s;
 }
 
 nav a:hover {
-    color: #fff;
+    color: var(--bg-branco);
 }
 </style>
