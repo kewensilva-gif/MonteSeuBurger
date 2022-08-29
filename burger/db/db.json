@@ -78,6 +78,24 @@
     }
   ],
   "burgers": [
-
+    {
+      "nome": "Kéwen silva",
+      "carne": null,
+      "pao": null,
+      "opcionais": [],
+      "status": "Solicitado",
+      "id": 1
+    },
+    {
+      "nome": "andrea",
+      "carne": "Picanha",
+      "pao": "3 Queijos",
+      "opcionais": [
+        "Bacon",
+        "Cheddar"
+      ],
+      "status": "Solicitado",
+      "id": 2
+    }
   ]
 }

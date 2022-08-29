@@ -142,6 +142,7 @@ export default {
     }
 
     #opcionais-container {
+        display: flex;
         flex-direction: row;
         flex-wrap: wrap;
     }
@@ -150,7 +151,7 @@ export default {
         width: 100%;
     }
 
-    #checkbox-container {
+    .checkbox-container {
         display: flex;
         align-items: flex-start;
         width: 50%;
