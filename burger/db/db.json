@@ -78,23 +78,6 @@
     }
   ],
   "burgers": [
-    {
-      "nome": "KEWEN",
-      "carne": "Alcatra",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Cheddar"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "nome": null,
-      "carne": "Maminha",
-      "pao": null,
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 2
-    }
+
   ]
 }
