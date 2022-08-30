@@ -79,14 +79,26 @@
   ],
   "burgers": [
     {
-      "nome": "Kewen",
+      "nome": "KEWEN",
       "carne": "Alcatra",
-      "pao": "3 Queijos",
+      "pao": "Parmesão e Orégano",
       "opcionais": [
-        "Bacon"
+        "Bacon",
+        "Salame"
       ],
-      "status": "Solicitado",
+      "status": "Em produção",
       "id": 1
+    },
+    {
+      "nome": null,
+      "carne": "Maminha",
+      "pao": "Parmesão e Orégano",
+      "opcionais": [
+        "Cheddar",
+        "Tomate"
+      ],
+      "status": "",
+      "id": 2
     }
   ]
 }

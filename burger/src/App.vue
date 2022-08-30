@@ -46,7 +46,6 @@ export default {
 }
 
 h1 {
-  text-align: center;
   font-size: 42px;
   margin-bottom: 30px;
   color: var(--bg-cinza-principal);

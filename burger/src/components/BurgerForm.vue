@@ -3,6 +3,7 @@
     <Message :msg="msg" v-show="msg"/>
     <div>
       <form id="burger-form" @submit="createBurger">
+        <h1>Monte seu burger</h1>
         <div class="input-container">
           <label for="nome">Nome do cliente:</label>
           <input
@@ -179,6 +180,7 @@ export default {
         left: 0;
         cursor: pointer;
         transition: .5s;
+        border-left: 5px solid var(--bg-amarelo-principal);
     }
 
     .submit-btn:hover {
